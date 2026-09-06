@@ -1,0 +1,46 @@
+/* Загальні налаштування сторінки */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Контейнер галереї: вирівнювання, сітка та відступи */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  column-gap: 24px;
+  list-style: none;
+  width: 1128px;
+  margin: 24px auto;
+  padding: 0;
+}
+
+/* Елемент галереї (картка): рівно 3 елементи в рядок з урахуванням відступів між ними */
+.gallery-item {
+  width: calc((1128px - 48px) / 3);
+  height: 200px;
+}
+
+/* Посилання всередині картки */
+.gallery-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Зображення: заповнює всю картку без спотворень */
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Ефект при наведенні (hover) */
+.gallery-image:hover {
+  transform: scale(1.04);
+}
